@@ -1,0 +1,11 @@
+name: WaterdogHelper
+author: alvin0319
+main: alvin0319\WaterdogHelper\WaterdogHelper
+version: 1.0.0
+api: 3.0.0
+
+permissions:
+  waterdoghelper.command.transfer:
+    default: true
+  waterdoghelper.command.golobby:
+    default: op
