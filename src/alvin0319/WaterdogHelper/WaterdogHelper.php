@@ -65,9 +65,18 @@ class WaterdogHelper extends PluginBase implements Listener{
 		if($playerReflection === null){
 			$playerReflection = new ReflectionClass(Player::class);
 		}
-		$ipProperty = $playerReflection->getProperty("ip");
-		$xuidProperty = $playerReflection->getProperty("xuid");
-		$uuidProperty = $playerReflection->getProperty("uuid");
+		static $ipProperty = null;
+		if($ipProperty === null){
+			$ipProperty = $playerReflection->getProperty("ip");
+		}
+		static $xuidProperty = null;
+		if($xuidProperty === null){
+			$xuidProperty = $playerReflection->getProperty("xuid");
+		}
+		static $uuidProperty = null;
+		if($uuidProperty === null){
+			$uuidProperty = $playerReflection->getProperty("uuid");
+		}
 
 		$ipProperty->setAccessible(true);
 		$xuidProperty->setAccessible(true);
