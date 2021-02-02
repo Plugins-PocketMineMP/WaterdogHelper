@@ -91,19 +91,6 @@ class WaterdogHelper extends PluginBase implements Listener{
 	}
 
 	/**
-	 * @param Player $player
-	 * @param String $server
-	 *
-	 * @return bool
-	 */
-	public function transfer(Player $player, string $server) : bool{
-		$pk = new ScriptCustomEventPacket();
-		$pk->eventName = "bungeecord:main";
-		$pk->eventData = Binary::writeShort(strlen("Connect")) . "Connect" . Binary::writeShort(strlen($server)) . $server;
-		return $player->sendDataPacket($pk);
-	}
-
-	/**
 	 * @param String $player
 	 * @param String $message
 	 *

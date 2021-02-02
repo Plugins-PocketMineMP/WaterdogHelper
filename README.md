@@ -1,6 +1,8 @@
 # WaterdogHelper
 A PocketMine-MP plugin that allows control Waterdog Proxy.
 
+**IMPORTANT**: This is the updated-version of WaterdogPE, if you found legacy WaterdogHelper, go to [legacy](https://github.com/alvin0319/WaterdogHelper/tree/legacy) branch.
+
 # API
 ```php
 $api = \alvin0319\WaterdogHelper\WaterdogHelper::getInstance();
@@ -8,8 +10,6 @@ $api = \alvin0319\WaterdogHelper\WaterdogHelper::getInstance();
 $player = $api->getServer()->getPlayerExact("my_player_name");
 
 if($player instanceof \pocketmine\Player){
-    // transfer player
-    $api->transfer($player, "server_name");
     // send message
     $api->sendMessage($player, "message description");
 }

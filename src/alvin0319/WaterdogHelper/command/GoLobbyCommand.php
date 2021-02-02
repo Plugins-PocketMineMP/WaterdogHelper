@@ -23,7 +23,7 @@ class GoLobbyCommand extends PluginCommand{
 		}
 		$sender->sendMessage(TextFormat::GREEN . "Transferring...");
 		foreach($sender->getServer()->getOnlinePlayers() as $player){
-			WaterdogHelper::getInstance()->transfer($player, WaterdogHelper::getInstance()->getConfig()->get("lobby_name", "lobby"));
+			$player->transfer(WaterdogHelper::getInstance()->getConfig()->get("lobby_name", "lobby"));
 		}
 		return true;
 	}
